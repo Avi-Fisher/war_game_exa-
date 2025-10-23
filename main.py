@@ -1,5 +1,7 @@
-def create_player(name:str) -> dict:
+from game_logic import game
+from utils import back,all_name_card
 
-def init_game()->dict:
+if __name__ == "__main__" :
+    game.create_player()
 
-def play_round(p1:dict,p2:dict):
+
