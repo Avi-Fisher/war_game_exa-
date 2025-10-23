@@ -1,4 +1,3 @@
-
 def create_card(rank:str,suite:str) -> dict:
 
     suite_option = ["H","C","D","S"]
@@ -20,6 +19,16 @@ def create_card(rank:str,suite:str) -> dict:
 
     return dict_card
 
+def compare_cards(p1_card:dict, p2_card:dict) -> str:
+
+    if p1_card["value"] > p2_card["value"]:
+        return "p1"
+    elif p1_card["value"] < p2_card["value"]:
+        return "p2"
+    elif p1_card["value"] == p2_card["value"]:
+        return "war"
+    else:
+        return "Error"
 
 
 
@@ -34,10 +43,41 @@ def create_card(rank:str,suite:str) -> dict:
 
 
 
-#
-#
-# def compare_cards(p1_card:dict, p2_card:dict) -> str:
-#
+
+
 # def create_deck() -> list[dict]:
 #
 # def shuffle(deck:list[dict]) -> list[dict]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
