@@ -1,7 +1,10 @@
+import all_name_card
+
+
 def create_card(rank:str,suite:str) -> dict:
 
-    suite_option = ["H","C","D","S"]
-    rank_option = ["2","3", "4","5","6","7","8","9","10","J","Q","K","A"]
+    suite_option = all_name_card.suite_name()
+    rank_option = all_name_card.rank_name()
 
     if rank not in rank_option or suite not in suite_option:
         print("Error this velue cant use")
@@ -30,6 +33,19 @@ def compare_cards(p1_card:dict, p2_card:dict) -> str:
     else:
         return "Error"
 
+def create_deck() -> list[dict]:
+    full_back = []
+
+    for i in range(13):
+        for i2 in range(4):
+            card = {}
+            card["rank"] = all_name_card.rank_name()[i]
+            card["suite"] = all_name_card.suite_name()[i2]
+            card["value"] = all_name_card.value()[i]
+
+            full_back.append(card)
+
+    return full_back
 
 
 
@@ -41,12 +57,6 @@ def compare_cards(p1_card:dict, p2_card:dict) -> str:
 
 
 
-
-
-
-
-# def create_deck() -> list[dict]:
-#
 # def shuffle(deck:list[dict]) -> list[dict]:
 
 
