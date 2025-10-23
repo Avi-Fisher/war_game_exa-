@@ -1,5 +1,5 @@
 import all_name_card
-
+import random
 
 def create_card(rank:str,suite:str) -> dict:
 
@@ -47,22 +47,22 @@ def create_deck() -> list[dict]:
 
     return full_back
 
+def shuffle(deck:list[dict]) -> list[dict]:
+    count = 0
+    len_deck = len(deck)
 
+    while count < 1000:
 
+        index1 = (random.randrange(0,len_deck))
+        index2 = (random.randint(0,len_deck - 1))
 
+        if index1 == index2:
+            continue
 
+        deck[index1], deck[index2] = deck[index2], deck[index1]
+        count += 1
 
-
-
-
-
-
-# def shuffle(deck:list[dict]) -> list[dict]:
-
-
-
-
-
+    return deck
 
 
 
