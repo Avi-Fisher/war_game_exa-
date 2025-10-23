@@ -8,6 +8,7 @@ def suite_name():
 
 def value():
     value = []
+
     for n in range(2,15):
         value.append(n)
 
